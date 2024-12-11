@@ -1,0 +1,19 @@
+# Arquivos Python
+*.pyc
+__pycache__/
+
+# Ambientes virtuais
+venv/
+.env
+
+# Banco de dados local
+db.sqlite3
+
+# Arquivos estáticos e de mídia gerados
+staticfiles/
+media/
+
+# Logs e outros arquivos temporários
+*.log
+*.pot
+*.py[co]

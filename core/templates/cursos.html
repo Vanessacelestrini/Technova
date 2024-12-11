@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Cursos{% endblock %}
+
+{% block content %}
+    
+    <main>
+        <h1>Cursos da TechNova</h1>
+        <p>Confira os cursos que oferecemos para o seu desenvolvimento profissional:</p>
+        
+        {% for curso in cursos %}
+        <section>
+            <h2>{{ curso.nome }}</h2>
+            <p>{{ curso.descricao }}</p>
+            <p><strong>Preço:</strong> R$ {{ curso.preco }}</p>
+            <p>{{ curso.carga_horaria }}</p>
+        </section>
+        {% endfor %}
+    </main>
+
+{% endblock %}
