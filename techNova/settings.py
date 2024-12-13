@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-465euu-ix&^yh0*ww+_x_4mvg_tb(8)(u%rjv-x+*mjh#$1)b-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['projetotechnova1.onrender.com', 'localhost', '127.0.0.1']
 
@@ -79,7 +77,14 @@ WSGI_APPLICATION = 'techNova.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse(os.getenv('DATABASE_URL')),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'technovadb_q7h8',
+        'USER': 'technovadb_q7h8_user',
+        'PASSWORD': 'sH9e35DPkvOaedQnVnbXNKnRugZhTv6E',
+        'HOST': 'postgresql://technovadb_q7h8_user:sH9e35DPkvOaedQnVnbXNKnRugZhTv6E@dpg-ctcj3n3tq21c73fquuug-a/technovadb_q7h8',
+        'PORT': '5432',
+    }
 }
 
 
@@ -117,11 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "'unsafe-eval'")
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
