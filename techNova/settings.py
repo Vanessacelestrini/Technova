@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'technovadb_q7h8',
         'USER': 'technovadb_q7h8_user',
         'PASSWORD': 'sH9e35DPkvOaedQnVnbXNKnRugZhTv6E',
-        'HOST': 'postgresql://technovadb_q7h8_user:sH9e35DPkvOaedQnVnbXNKnRugZhTv6E@dpg-ctcj3n3tq21c73fquuug-a/technovadb_q7h8',
+        'HOST': 'dpg-ctcj3n3tq21c73fquuug-a/technovadb_q7h8',
         'PORT': '5432',
     }
 }
@@ -123,10 +123,6 @@ USE_TZ = True
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
