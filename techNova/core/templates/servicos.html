@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Serviços da TechNova</h1>
+        <p>Conheça nossos serviços tecnológicos inovadores:</p>
+        
+        {% for servico in servicos %}
+        <section>
+            <h2>{{ servico.nome }}</h2>
+            <p>{{ servico.descricao }}</p>
+            <p><strong>Preço:</strong> R$ {{ servico.preco }}</p>
+        </section>
+        {% endfor %}
+    </main>
+{% endblock %}
