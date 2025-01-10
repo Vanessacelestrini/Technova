@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label class="form-label" for="email">Usuário:</label>
+        <input class="form-control" type="text" id="username" name="username" required>
+        <label class="form-label" for="password">Senha:</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+        <button class="btn btn-primary m-3" type="submit">Entrar</button>
+    </form>
+{% endblock %}
