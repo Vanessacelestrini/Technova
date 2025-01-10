@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+# admin.py
+>>>>>>> 08d80c2 (atualizado)
 from django.contrib import admin
 from core.models import Produto, CustomUser, Servico, Curso
 
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
+<<<<<<< HEAD
     list_display = ('nome', 'preco', 'estoque')
     search_fields = ('nome',)
     list_filter = ('categoria',)
@@ -20,3 +25,12 @@ class ServicoAdmin(admin.ModelAdmin):
 class CursoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'descricao', 'carga_horaria', 'preco')
     search_fields = ('nome',)
+=======
+    list_display = ('nome', 'preco', 'estoque')  # Exibe 'estoque' e 'preco'
+    search_fields = ('nome',)  # Pesquisa pelo nome do produto
+    list_filter = ('categoria',)  # Filtro pela categoria
+
+@admin.register(CustomUser)
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = ('username', 'email', 'is_staff', 'bio')  # Exibe o campo 'bio'
+>>>>>>> 08d80c2 (atualizado)

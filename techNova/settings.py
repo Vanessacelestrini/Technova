@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Django settings for techNova project.
 
@@ -10,26 +11,39 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+=======
+>>>>>>> 08d80c2 (atualizado)
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 08d80c2 (atualizado)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-465euu-ix&^yh0*ww+_x_4mvg_tb(8)(u%rjv-x+*mjh#$1)b-'
+=======
+SECRET_KEY = 'django-insecure-465euu-ix&^yh0*ww+_x_4mvg_tb(8)(u%rjv-x+*mjh#$1)b-'  # Você pode querer mudar essa chave para produção!
+>>>>>>> 08d80c2 (atualizado)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['projetotechnova1.onrender.com', 'localhost', '127.0.0.1']
 
+<<<<<<< HEAD
 
 # Application definition
 
+=======
+# Application definition
+>>>>>>> 08d80c2 (atualizado)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'core',
+=======
+    'core',  # Seu aplicativo que contém o modelo CustomUser
+>>>>>>> 08d80c2 (atualizado)
 ]
 
 MIDDLEWARE = [
@@ -70,6 +88,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'techNova.wsgi.application'
 
+<<<<<<< HEAD
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -85,6 +104,19 @@ DATABASES = {
     }
 }
 
+=======
+# Database
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  
+        'NAME': BASE_DIR / 'db.sqlite3',  
+}
+}
+
+# 
+AUTH_USER_MODEL = 'core.CustomUser'
+>>>>>>> 08d80c2 (atualizado)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -105,7 +137,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+<<<<<<< HEAD
 # Internationalization
+=======
+>>>>>>> 08d80c2 (atualizado)
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
@@ -116,8 +151,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 
 # Static files (CSS, JavaScript, Images)
+=======
+#
+>>>>>>> 08d80c2 (atualizado)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -126,4 +165,8 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+<<<<<<< HEAD
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+=======
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+>>>>>>> 08d80c2 (atualizado)

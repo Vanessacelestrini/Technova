@@ -1,5 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
+<<<<<<< HEAD
+=======
+from django.contrib.auth import authenticate
+from forms import LoginForm
+>>>>>>> 08d80c2 (atualizado)
 
 # Registrar novo usuário
 def registrarUsuario(request):
@@ -40,4 +45,18 @@ def listar_produtos(request):
     return render(request, 'listar-produtos.html')
 
 def cadastrar_produto(request):
+<<<<<<< HEAD
     return render(request, 'cadastrar-produto.html')
+=======
+    return render(request, 'cadastrar-produto.html')
+
+
+def login(request):
+    if request.method == 'POST':
+        form = LoginForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+    return render(request, 'login.html')
+>>>>>>> 08d80c2 (atualizado)
